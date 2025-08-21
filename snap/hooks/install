@@ -1,4 +1,4 @@
 #!/bin/sh -eu
 
 snapctl set image="portainer/portainer-ce:lts"
-snapctl set admin-password="$2y$EyvFTbMlwr5V9XlnKtLONe1DxWo60CgzTNJTSbipGZ/APwvxwZm3G"
+snapctl set admin-password='$2y$EyvFTbMlwr5V9XlnKtLONe1DxWo60CgzTNJTSbipGZ/APwvxwZm3G'
