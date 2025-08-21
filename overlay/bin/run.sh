@@ -12,6 +12,7 @@ if [ ! "$(docker ps --all --quiet --filter name="$NAME")" ]; then
         -p 9443:9443 \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v portainer_data:/data \
+        --log-driver none \
         "$IMAGE"
 fi
 
