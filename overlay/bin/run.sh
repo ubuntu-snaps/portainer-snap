@@ -3,10 +3,10 @@
 NAME="$SNAP_INSTANCE_NAME"
 IMAGE=$(snapctl get image)
 
-for PLUG in %PLUGS%; do
-  if ! snapctl is-connected ${PLUG}
+for PLUG in docker docker-executables; do
+  if ! snapctl is-connected $PLUG
   then
-    echo "WARNING: ${PLUG} interface not connected! Please run: /snap/${SNAP_INSTANCE_NAME}/current/bin/setup.sh"
+    echo "WARNING: $PLUG interface not connected! Please run: /snap/${SNAP_INSTANCE_NAME}/current/bin/setup.sh"
   fi
 done
 
