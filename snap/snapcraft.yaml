@@ -28,8 +28,8 @@ apps:
     command: bin/run.sh
     daemon: simple
     plugs:
-      - docker-executables
       - docker
+      - docker-executables
 
 parts:
   overlay:
