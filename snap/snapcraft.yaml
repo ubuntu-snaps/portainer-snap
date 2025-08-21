@@ -1,0 +1,33 @@
+name: portainer
+version: git
+summary: portainer
+description: |
+  Portainer is a powerful, open source toolset that allows you
+  to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
+
+base: core24
+grade: stable
+confinement: strict
+
+environment:
+  PATH: $SNAP/docker/bin:$PATH
+
+plugs:
+  docker-executables:
+    interface: content
+    content: docker-executables
+    target: $SNAP/docker
+    default-provider: docker
+
+apps:
+  portainer:
+    command: bin/run.sh
+    daemon: simple
+    plugs:
+      - docker-executables
+      - docker
+
+parts:
+  overlay:
+    plugin: dump
+    source: overlay
