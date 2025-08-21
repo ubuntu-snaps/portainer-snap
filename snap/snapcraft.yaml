@@ -5,7 +5,7 @@ description: |
   Portainer is a powerful, open source toolset that allows you
   to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
 
-base: core24
+base: core22
 grade: stable
 confinement: strict
 
