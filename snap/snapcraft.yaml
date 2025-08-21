@@ -9,6 +9,10 @@ base: core24
 grade: stable
 confinement: strict
 
+platforms:
+  amd64:
+  arm64:
+
 environment:
   PATH: $SNAP/docker/bin:$PATH
 
