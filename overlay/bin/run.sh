@@ -13,7 +13,8 @@ if [ ! "$(docker ps --all --quiet --filter name="$NAME")" ]; then
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v portainer_data:/data \
         --log-driver none \
-        "$IMAGE"
+        "$IMAGE" \
+        --admin-password="$(snapctl get admin-password)"
 fi
 
 echo "Starting container ..."
